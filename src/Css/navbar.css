@@ -1,0 +1,43 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    /* styling universal */
+    
+
+    nav.navbarku{
+     background-color: unset;   
+     padding: 10px 50px 10px 30px;
+     height: 100%;
+     box-shadow: none;
+    }
+
+    .wrap-search {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+   } 
+
+   nav .input-field{
+       margin-right: 30px;
+   }
+   nav .input-field label i
+   {
+    margin-top: -70px;
+    margin-left: 2%;
+ 
+   }
+
+   .dropdown-trigger.btn{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+   }
+
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://source.unsplash.com/random) ;
+    }
