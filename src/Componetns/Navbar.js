@@ -5,6 +5,12 @@ import '../Css/navbar.css';
 
 
 class Navbar extends Component {
+  
+    
+  state = {
+    isLogin:false,
+  };
+
 
     componentDidMount(){
         document.addEventListener('DOMContentLoaded', function() {
@@ -27,17 +33,32 @@ class Navbar extends Component {
       <a href="#!" className="brand-logo">Logo</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i className="material-icons">menu</i></a>
     
-    <div className="right hide-on-med-and-down">
-    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-    <ul id="dropdown1" className="dropdown-content">
-            <li><a href="#!">Profil</a></li>
-            <li><a href="#!">Setting</a></li>
-            <li className="divider"></li>
-            <li><a href="#!">Help</a></li>
-            <li><a href="#!">Sign out</a></li>
-          </ul>
 
-          </div>
+      {this.state.isLogin ? (
+         <div className="right hide-on-med-and-down">
+         <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+         <ul id="dropdown1" className="dropdown-content">
+                 <li><a href="#!">Profil</a></li>
+                 <li><a href="#!">Setting</a></li>
+                 <li className="divider"></li>
+                 <li><a href="#!">Help</a></li>
+                 <li><a href="#!">Sign out</a></li>
+               </ul>
+     
+               </div>
+      ) : (
+        <div className="right hide-on-med-and-down">
+          <ul>
+            <li>
+              <a>Log in</a>
+            </li>
+        </ul>
+       </div>
+      
+      )}
+
+
+   
 
       <div className="hide-on-med-and-down">
         <div className="col wrap-search input-field ">
